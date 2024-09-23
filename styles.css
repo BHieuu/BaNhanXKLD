@@ -1,0 +1,502 @@
+/* Importing Google Font "Raleway" */
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+
+/* ============================
+   Global Styles (Body, Anchor, etc.)
+   ============================ */
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 1.8em;
+}
+
+a {
+  color: #1c9c94;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+li {
+  list-style: none;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-family: "Noto Sans JP", sans-serif;
+}
+/* ============================
+   Layout for Header, Main, Footer
+   ============================ */
+header,
+main,
+footer {
+  margin: 0 auto;
+}
+
+main {
+  padding-top: 55vh; /* This ensures the content starts after the header */
+  max-width: 1140px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* ============================
+   Header Styles
+   ============================ */
+/* Updated Header Styles */
+header {
+  padding: 1em;
+  text-align: center;
+  background-image: url("./img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+
+  z-index: 999;
+  transition: none;
+}
+
+/* Flexbox for header content */
+header section {
+  margin: 0 auto;
+  max-width: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Styling for header image */
+header img {
+  border-radius: 70%;
+  max-width: 150px;
+}
+
+/* Title and subtitle styles */
+h1 {
+  text-transform: uppercase;
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 1em 0;
+  font-size: 55px;
+  color: white;
+  letter-spacing: 3px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+h1:hover {
+  color: #d0d0d0;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+p.abm {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #ffffff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 10px auto 20px auto;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+p.abm:hover {
+  transform: scale(1.02);
+}
+
+/* ============================
+   About Me Section Styles
+   ============================ */
+h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Noto Sans JP", sans-serif;
+  text-align: center;
+}
+
+h4 {
+  font-weight: bold;
+  font-family: "Noto Sans JP", sans-serif;
+  text-align: center;
+}
+/* Styling for the About Me section */
+.course {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.course h3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.course .title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.course .title h4 {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+  padding-left: 10px;
+  font-weight: 500;
+}
+
+.course .fa-check {
+  color: #1c9c94;
+  font-size: 20px;
+}
+span {
+  font-family: "Noto Sans JP", sans-serif;
+}
+/* ============================
+   Skills Section
+   ============================ */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Skills Table */
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+/* Styling for table header */
+.skills-table thead th {
+  background-color: #509e98;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Styling for table rows */
+.skills-table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Styling for table cells */
+.skills-table tbody td {
+  padding: 10px;
+}
+
+.skills-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+/* ============================
+   Scrolling Title Section
+   ============================ */
+.scrolling-title {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0;
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrolling-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 10s linear infinite;
+}
+
+.scrolling-content.reverse {
+  animation: scroll-right 10s linear infinite;
+}
+
+/* Keyframes to scroll left */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Keyframes to scroll right */
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ============================
+   Gallery Section
+   ============================ */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease,
+    opacity 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery img:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1);
+  opacity: 0.9;
+}
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  25% {
+    transform: scale(1.1);
+    opacity: 1;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+.gallery img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.gallery img:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.gallery img:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.gallery img:nth-child(4) {
+  animation-delay: 3s;
+}
+
+.gallery img:nth-child(5) {
+  animation-delay: 4s;
+}
+/* ============================
+   Map Section
+   ============================ */
+.map {
+  margin-top: 20px;
+}
+
+.map h3 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+/* Flexbox container for map */
+.map-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.map-container iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid #e0e0e0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.map-container iframe:hover {
+  transform: scale(1.03);
+}
+
+/* Address text */
+.address {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.address p {
+  font-weight: bold;
+  color: #0073e6;
+}
+
+/* Thêm khoảng cách giữa các đoạn văn */
+.address p + p {
+  margin-top: 5px;
+}
+
+/* ============================
+   Footer Styles
+   ============================ */
+footer {
+  background-color: #1c1c1c;
+  padding: 20px 0;
+  color: white;
+  font-size: 1em;
+  font-family: "Raleway", sans-serif;
+  text-align: right;
+}
+
+.footer-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.footer-info p {
+  margin: 5px 0;
+  margin-left: 15px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social a {
+  color: white;
+  font-size: 1.5em;
+  margin: 0 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-social a:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+.footer-social i {
+  transition: color 0.3s ease;
+}
+
+/* Responsive styles for footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-info {
+    text-align: center;
+  }
+}
+
+/* ============================
+   Zalo Contact Button with Effects
+   ============================ */
+/* Zalo Contact Styles */
+.zalo-contact {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.zalo-contact.show {
+  opacity: 1;
+}
+
+.icon-wrapper {
+  display: inline-block;
+  transition: box-shadow 0.3s ease;
+}
+
+.icon-wrapper img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0px 8px 20px rgba(0, 0, 255, 0.4);
+}
+
+/* Hiệu ứng rung (shake) chỉ khi JavaScript thêm lớp "shake" */
+.shake {
+  animation: shake-animation 0.6s ease;
+}
+
+/* Keyframes for shake animation */
+@keyframes shake-animation {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(2px, 2px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-2px, -2px) rotate(-1deg);
+  }
+  75% {
+    transform: translate(2px, -2px) rotate(1deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+/* ============================
+   Fade Eff
+   ============================ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}

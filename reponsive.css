@@ -1,0 +1,358 @@
+/* Importing Google Font "Raleway" */
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+
+/* ============================
+   Global Styles (Body, Anchor, etc.)
+   ============================ */
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 1.8em;
+}
+
+a {
+  color: #1c9c94;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+li {
+  list-style: none;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/* ============================
+   Layout for Header, Main, Footer
+   ============================ */
+header,
+main,
+footer {
+  margin: 0 auto;
+}
+
+main {
+  padding-top: 100px;
+  max-width: 1140px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 80px;
+  }
+  header {
+    height: 60%;
+  }
+}
+
+/* ============================
+   Header Styles
+   ============================ */
+header section {
+  margin: 0 auto;
+  max-width: 640px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+}
+
+header section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+header section p {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 1em 0;
+  font-size: 55px;
+  color: white;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  header img {
+    max-width: 100px;
+  }
+}
+
+/* ============================
+   About Me Section Styles
+   ============================ */
+.course {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.course h3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.course .title h4 {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+  padding-left: 10px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .course h3 {
+    font-size: 20px;
+  }
+
+  .course .title h4 {
+    font-size: 16px;
+  }
+}
+
+/* ============================
+   Skills Section
+   ============================ */
+.skills-languages-section {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+.skills-column,
+.languages-column {
+  flex: 1;
+  max-width: 45%;
+}
+
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f4f7f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills-table thead th {
+  background-color: #1c9c94;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.skills-table tbody tr {
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.skills-table tbody tr:hover {
+  background-color: rgba(28, 156, 148, 0.1);
+}
+
+.skills-table tbody td {
+  padding: 15px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.skills-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skills-languages-section {
+    flex-direction: column;
+  }
+
+  .skills-column,
+  .languages-column {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .skills-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .skills-table thead,
+  .skills-table tbody,
+  .skills-table th,
+  .skills-table td,
+  .skills-table tr {
+    display: block;
+  }
+
+  .skills-table tr {
+    margin-bottom: 15px;
+  }
+
+  .skills-table th {
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .skills-table td {
+    padding: 10px;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .skills-table tbody tr:last-child td {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+/* ============================
+   Gallery Section
+   ============================ */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .gallery img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* ============================
+   Map Section
+   ============================ */
+.map-container {
+  display: flex;
+  justify-content: center;
+}
+
+.map-container iframe {
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .map-container iframe {
+    height: 250px;
+  }
+}
+
+/* ============================
+   Footer Styles
+   ============================ */
+footer {
+  background-color: #1c1c1c;
+  padding: 20px 0;
+  color: white;
+  font-size: 1em;
+  font-family: "Raleway", sans-serif;
+  text-align: right;
+}
+
+.footer-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-info p {
+    text-align: center;
+  }
+}
+
+/* ============================
+   Zalo Contact Button
+   ============================ */
+.zalo-contact {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.zalo-contact img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive styles for Zalo contact */
+@media (max-width: 768px) {
+  .zalo-contact img {
+    width: 50px;
+    height: 50px;
+  }
+}
